@@ -19,13 +19,12 @@ module.exports = () => {
     },
     plugins: [
       new HtmlWebpackPlugin({
-        template: "./src/index.html",
-        filename: "index.html",
+        template: "./index.html",
         title: "J.A.T.E",
       }),
       new InjectManifest({
-        swSrc: "./src/js/sw.js",
-        swDest: "sw.js",
+        swSrc: "./src-sw.js",
+        swDest: "src-sw.js",
       }),
       new WebpackPwaManifest({
         name: "Just Another Text Editor",
