@@ -21,6 +21,7 @@
     "workbox-webpack-plugin": "^6.5.4"
   },
   "devDependencies": {
+    "babel-loader": "^8.2.5",
     "concurrently": "^5.2.0",
     "html-webpack-plugin": "^5.5.0",
     "nodemon": "^2.0.4",
