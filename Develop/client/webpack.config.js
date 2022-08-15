@@ -27,6 +27,8 @@ module.exports = () => {
         swDest: "src-sw.js",
       }),
       new WebpackPwaManifest({
+        fingerprints: false,
+        inject: true,
         name: "Just Another Text Editor",
         short_name: "J.A.T.E",
         description: "A simple text editor",
@@ -34,11 +36,9 @@ module.exports = () => {
         theme_color: "#ffffff",
         start_url: "/",
         publicPath: "/",
-        fingerprints: false,
-        inject: true,
         icons: [
           {
-            src: path.resolve("src/assets/icon.png"),
+            src: path.resolve("src/images/logo.png"),
             sizes: [96, 128, 192, 256, 384, 512],
             destination: path.join("assets", "icons"),
           },
@@ -54,7 +54,7 @@ module.exports = () => {
         },
         {
           test: /\.m?js$/,
-          exclude: /(node_modules|bower_components)/,
+          exclude: /node_modules/,
           use: {
             loader: "babel-loader",
             options: {
